@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<style>
+	title{
+		background-color: blue;
+		color: blue;
+
+	}
+	</style>
+	<meta charset="UTF-8">
+	<title>Contrail</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Contaril Assignment</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Timestamp</th>
+					<th>Destination ip</th>
+					<th>Destination vn</th>
+					<th>Direction ingress</th>
+					<th>Destination port</th>
+					<th>Protocol</th>
+					<th>source ip</th>
+					<th>source vn</th>
+					<th>Source port</th>
+					<th>sum bytes kb</th>
+					<th>sum packets</th>
+				</tr>
+				<tr>
+					<td><input class="form-control timestamp-input"></td>
+					<td><input class="form-control Destination_ip-input"></td>
+					<td><input class="form-control Destination_vn-input"></td>
+					<td><input class="form-control Direction-input"></td>
+					<td><input class="form-control Destination_port-input"></td>
+					<td><input class="form-control Protocol-input"></td>
+					<td><input class="form-control source_ip-input"></td>
+					<td><input class="form-control source_vn-input"></td>
+					<td><input class="form-control source_port-input"></td>
+					<td><input class="form-control sum_bytes-input"></td>
+					<td><input class="form-control sum_packets-input"></td>
+					<td><button class="btn btn-primary add-info">Add</button></td>
+				</tr>
+			</thead>
+			<tbody class="infos-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="infos-list-template">
+	<td><span class="timestamp"><%= timestamp %></span></td>
+	<td><span class="Destination_ip"><%=Destination_ip %></span></td>
+	<td><span class="Destination_vn"><%= Destination_vn %></span></td>
+	<td><span class="Direction"><%=Direction_ingress%></span></td>
+	<td><span class="Destination_port"><%= Destination_port %></span></td>
+	<td><span class="protocol"><%=Protocol%></span></td>
+	<td><span class="source_ip"><%= source_ip %></span></td>
+	<td><span class="source_vn"><%=source_vn%></span></td>
+	<td><span class="source_port"><%=source_port %></span></td>
+	<td><span class="sum_bytes"><%=sum_bytes%></span></td>
+	<td><span class="sum_packets"><%=sum_packets %></span></td>
+	
+
+	<td><button class="btn btn-warning edit-info">Edit</button> <button class="btn btn-danger delete-info">Delete</button><button class="btn btn-success update-info" style="display:none">Update</button> <button class="btn btn-danger cancel" style="display:none">Cancel</button></td>
+
+	</script>
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
